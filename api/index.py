@@ -5,7 +5,7 @@ from pydantic import BaseModel
 from typing import List
 from supabase import create_client, Client
 
-from core.melody_gen import generate_melody_array
+from .core.melody_gen import generate_melody_array
 
 app = FastAPI()
 
