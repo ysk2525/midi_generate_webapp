@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ja">
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>メロディジェネレーター</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tone/14.8.49/Tone.js"></script>
+</head>
+<body>
+    <h1>メロディジェネレーター</h1>
+    
+    <div>
+        <label>コード進行 (カンマ区切り): </label>
+        <input type="text" id="chords" value="C,G,Am,F" placeholder="例: C,G,Am,F">
+    </div>
+    <br>
+    <div>
+        <label>BPM: </label>
+        <input type="number" id="bpm" value="120">
+    </div>
+    <br>
+    
+    <button id="likeBtn" style="display: none; background-color: #ff9999; border-radius: 5px; padding: 10px;">
+        ❤️ いいね！ (このメロディを保存)
+    </button>
+    <button id="generateBtn">生成して再生！</button>
+
+    <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,97 @@
+/* 全体のベース設定 */
+body {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    background-color: #121212; /* 深い闇のような黒 */
+    color: #e0e0e0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+h1 {
+    color: #ffffff;
+    letter-spacing: 2px;
+    border-bottom: 2px solid #ff4444; /* V-keiを彷彿とさせる赤のアクセント */
+    padding-bottom: 10px;
+    margin-bottom: 30px;
+}
+
+/* 入力エリアのコンテナ */
+.container {
+    background-color: #1e1e1e;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    width: 90%;
+    max-width: 400px;
+}
+
+.input-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 0.9rem;
+    color: #aaa;
+}
+
+input {
+    width: 100%;
+    padding: 12px;
+    box-sizing: border-box;
+    background-color: #2a2a2a;
+    border: 1px solid #444;
+    border-radius: 6px;
+    color: #fff;
+    font-size: 1rem;
+    transition: border-color 0.3s;
+}
+
+input:focus {
+    outline: none;
+    border-color: #ff4444;
+}
+
+/* ボタンの共通スタイル */
+button {
+    width: 100%;
+    padding: 15px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    border: none;
+    border-radius: 6px;
+    transition: transform 0.1s, opacity 0.3s;
+    margin-top: 10px;
+}
+
+button:active {
+    transform: scale(0.98);
+}
+
+/* 生成ボタン */
+#generateBtn {
+    background: linear-gradient(45deg, #444, #222);
+    color: white;
+    border: 1px solid #555;
+}
+
+#generateBtn:hover {
+    background: linear-gradient(45deg, #555, #333);
+}
+
+/* いいねボタン */
+#likeBtn {
+    background-color: #ff4444;
+    color: white;
+    display: none; /* 最初は非表示（JSで制御） */
+}
+
+#likeBtn:hover {
+    opacity: 0.9;
+}
