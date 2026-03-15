@@ -13,15 +13,16 @@ document.getElementById('generateBtn').addEventListener('click', async () => {
     // 新しい曲を生成し始めたら、一度「いいね」ボタンを隠す（誤操作を防ぐためだよ）
     document.getElementById('likeBtn').style.display = 'none';
 
-    try {
-       const response = await fetch('/api/generate', {
-    method: 'POST',
-    headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({
-        bpm: parseInt(bpmValue),
-        chord_progression: chordProgression
-    })
-});
+   try {
+        // 【ここだ！】絶対パス（http://...）を消して、相対パス（/api/...）にする
+        const response = await fetch('/api/generate', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+                bpm: parseInt(bpmValue),
+                chord_progression: chordProgression
+            })
+        });
 
         const data = await response.json();
 
