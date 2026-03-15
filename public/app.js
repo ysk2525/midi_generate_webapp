@@ -50,10 +50,12 @@ document.getElementById('likeBtn').addEventListener('click', async () => {
 
     try {
         // バックエンド（Python）の保存用APIへデータを送る
-        const response = await fetch('http://localhost:8000/api/like', {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({
+     // 【いいねボタンの処理の中も忘れずに！】
+const response = await fetch('/api/like', { // ここも相対パスに！
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ ... })
+});
                 bpm: currentBpm,
                 chord_progression: currentChords,
                 melody_data: currentMelodyData // 覚えておいた箱の中身を送る！
