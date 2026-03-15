@@ -14,14 +14,14 @@ document.getElementById('generateBtn').addEventListener('click', async () => {
     document.getElementById('likeBtn').style.display = 'none';
 
     try {
-        const response = await fetch('http://localhost:8000/api/generate', {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({
-                bpm: parseInt(bpmValue),
-                chord_progression: chordProgression
-            })
-        });
+       const response = await fetch('/api/generate', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({
+        bpm: parseInt(bpmValue),
+        chord_progression: chordProgression
+    })
+});
 
         const data = await response.json();
 
